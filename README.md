@@ -4,13 +4,13 @@ ReactJS Native로 날씨 앱 만들기
 
 ## `시작하기`
 ### React Native
-- 네이티브 웹 애플리케이션을 빌드하게 도와주는 UI 라이브러리이다.
-- 리액트 네이티브는 html, css 애플리케이션을 생성하지 않는다.
-- 마지막 컴파일링 시, 각각 iOS(objective-c) / android(java) 네이티브 코드로 샐행된다.
-- 리액트 네이티브의 장점은, 자바스크립트를 활용할 수 있고, 커뮤니티가 매우 크고, 많은 회사가 리액트 네이티브를 쓰고 있다는 점이다.<br>
+- Native 웹 애플리케이션을 빌드하게 도와주는 UI 라이브러리이다.
+- React Native는 html, css 애플리케이션을 생성하지 않는다.
+- 마지막 컴파일링 시, 각각 iOS(objective-c) / android(java) Native 코드로 샐행된다.
+- React Native의 장점은, 자바스크립트를 활용할 수 있고, 커뮤니티가 매우 크고, 많은 회사가 React Native를 쓰고 있다는 점이다.<br>
 
 ### Expo
-- expo는 xcode, android studio 없이 리액트 네이티브로 앱을 만드는 것을 도와준다.
+- expo는 xcode, android studio 없이 React Native로 앱을 만드는 것을 도와준다.
 - expo client를 다운받아서 앱을 테스트할 수 있다.
 - pc에서 변경사항이 있으면, 모바일에서도 자동으로 새로고침되어 적용된다.
 - 또한 앱을 업데이트하고 싶을 때마다 앱이 알아서 업데이트한다.
@@ -21,12 +21,12 @@ ReactJS Native로 날씨 앱 만들기
 ### Basic React Native Concepts
 - div, html이 없다. 즉, return 할 수 있는 컴포넌트가 정해져있다.
   > React Native 컴포넌트 리스트 참조 : [React Native Docs](http://facebook.github.io/react-native/docs/getting-started)
-- 정해진 리액트 네이티브 컴포넌트 사용으로 각각 ios/android에 따라 전혀 다르게 볼 수 있다.
-- 리액트 네이티브 레이아웃 디자인은 flexbox로 가능하다.
-- 리액트 네이티브는 매우 엄격하다.(리액트와 달리)
+- 정해진 React Native 컴포넌트 사용으로 각각 ios/android에 따라 전혀 다르게 볼 수 있다.
+- React Native 레이아웃 디자인은 flexbox로 가능하다.
+- React Native는 매우 엄격하다.(React와 달리)
 
 ### React Native Layouts with Flexbox
-- 리액트 네이티브 flexbox는 기존 css와 100% 동일하지는 않다.
+- React Native flexbox는 기존 css와 100% 동일하지는 않다.
 - flex direction 디폴트 설정은 column 이다.
 - property 네이밍 규칙은 캐멀케이스이다.(ex. alignItems)
 - value는 string 이어야 하며, 여러 개의 object를 만들고 싶다면 쉼표를 써야 한다.
@@ -91,7 +91,7 @@ componentDidMount() {
     )
 }
 ```
-- 리액트 네이티브는 navigator라는 object가 있다.(구글 크롬의 navigator 같은 것)
+- React Native는 navigator라는 object가 있다.(구글 크롬의 navigator 같은 것)
 - navigator는 위치정보(geolocation) object를 가지고 있다.
 - geolocation은 getCurrentPosition이라는 function을 가지고 있다.
 - getCurrentPosition은 position이라는 argument를 실행시키고, 해당 실행이 성공적일 때마다 위치정보를 얻게 된다.
