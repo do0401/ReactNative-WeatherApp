@@ -215,14 +215,24 @@ export default Weather;
 ```
 - Weather 컴포넌트는 크게 아이콘, 온도, 타이틀을 변경하므로, 위와 같이 props가 필요하다.
 - 그리고 weatherCases 리스트를 만들어 각 날씨를 표현할 정보를 넣어둔다.(배경색,타이틀 등)
-- 
+- weather 컴포넌트에서 weatherCases 리스트를 사용하여 보여주고자 하는 정보를 표현한다.
 ```javascript
-{isLoaded ? (
-    <Weather temp={Math.floor(temperature - 273.15)}/>) : (
-    <View style={styles.loading}>
-    <Text style={styles.loadingText}>Getting the fucking weather</Text>
-    {error ? <Text style={styles.errorText}>{error}</Text> : null}
-    </View>
-    )
+render() {
+    const { isLoaded, error, temperature, name } = this.state;
+    return (
+        <View style={styles.container}>
+        <StatusBar hidden={true}/>
+        {isLoaded ? (
+            <Weather weatherName={name} temp={Math.floor(temperature - 273.15)}/>) : (
+            <View style={styles.loading}>
+            <Text style={styles.loadingText}>Getting the fucking weather</Text>
+            {error ? <Text style={styles.errorText}>{error}</Text> : null}
+            </View>
+            )
+        }
+        </View>
+    );
+    }
+}
 ```
-- App.js 에서 weather를 render할 때마다 temp도 render하도록 추가한다.
+- App.js 에서 weather를 render할 때마다 weatherName과 temp도 render하도록 추가한다.
